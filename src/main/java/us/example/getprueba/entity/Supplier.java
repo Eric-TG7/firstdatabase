@@ -4,7 +4,10 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 @Entity
-@Table(name = "Supplier")
+@Table(name = "Supplier",indexes = {
+        @Index(columnList = "companyName"),
+        @Index(columnList = "postalCode")
+})
 @Data
 public class Supplier {
     @Id

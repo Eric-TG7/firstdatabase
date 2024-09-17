@@ -4,7 +4,9 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 @Entity
-@Table
+@Table(indexes = {
+        @Index(columnList = "categoryName"),
+})
 @Data
 public class Category {
     @Id

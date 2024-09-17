@@ -3,17 +3,17 @@ package us.example.getprueba.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import us.example.getprueba.entity.Customer;
-import us.example.getprueba.entity.Shipper;
+import us.example.getprueba.entity.Order;
 import us.example.getprueba.repository.CustomerRepository;
-import us.example.getprueba.repository.ShipperRepository;
+import us.example.getprueba.repository.OrderRepository;
 
 @Service
-public class ShipperService {
+public class OrderService {
     @Autowired
-    private ShipperRepository shipperRepository;
+    private OrderRepository orderRepository;
 
 
-    public void saveShipperRepository( Shipper shipper) {
-        shipperRepository.save(shipper);
+    public void saveOrderRepository( Order order) {
+        orderRepository.save(order);
     }
 }

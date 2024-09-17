@@ -6,17 +6,17 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import us.example.getprueba.entity.Category;
-import us.example.getprueba.entity.Supplier;
+import us.example.getprueba.entity.Product;
 import us.example.getprueba.service.CategoryService;
-import us.example.getprueba.service.SupplierService;
+import us.example.getprueba.service.ProductService;
 
 @RestController
 @RequestMapping("/api")
-public class CategoryController {
+public class ProductController {
     @Autowired
-    private CategoryService categoryService;
-    @PostMapping("/category")
-    public void saveCategoryRepository(@RequestBody Category category){
-        categoryService.saveCategoryRepository(category);
+    private ProductService productService;
+    @PostMapping("/product")
+    public void saveProductRepository(@RequestBody Product product){
+        productService.saveProductRepository(product);
     }
 }
